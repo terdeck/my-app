@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { Highlight } from './highlight';
+import { HighlightDirective } from './highlight';
 
 @Component({
   selector: 'app-services-home',
   standalone: true,
-  imports: [Highlight],
+  imports: [HighlightDirective],
   templateUrl: './services-home.html',
   styleUrl: './services-home.css',
 })

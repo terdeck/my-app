@@ -2,9 +2,9 @@ import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
   selector: '[appHighlight]',
-  // standalone: true
+  standalone: true
 })
-export class Highlight {
+export class HighlightDirective {
   constructor(el: ElementRef) {
     el.nativeElement.style.backgroundColor = 'purple';
   }
