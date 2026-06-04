@@ -1,35 +1,42 @@
 import { Component, OnInit } from '@angular/core';
 import { HighlightDirective } from './highlight';
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 
 @Component({
   selector: 'app-services-home',
   standalone: true,
-  imports: [HighlightDirective, NgFor, NgIf],
+  imports: [HighlightDirective, NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault],
   templateUrl: './services-home.html',
   styleUrl: './services-home.css',
 })
+
 export class ServicesHomeComponent implements OnInit {
+  color = '';
   bankingServices: any[] = [
     {
       "type": "Issue business loans",
-      "years": 2
+      "years": 2,
+      "category": "loans"
     },
     {
       "type": "Provide periodic reports and analysis",
-      "years": 7
+      "years": 7,
+      "category": "reports"
     },
     {
       "type": "Open new checking and/or saving accounts",
-      "years": 5
+      "years": 5,
+      "category": "financial_accounts"
     },
     {
       "type": "Monitor client accounts and keep information up-to-date",
-      "years": 3
+      "years": 3,
+      
     },
     {
-      "type": "Resolve debit and credit issues",
-      "years": 2
+      "type": 'Guide clients through their savings, loan, mortgage, and retirement options',
+      "years": 6,
+      "category": "options"
     }
   ];
 
