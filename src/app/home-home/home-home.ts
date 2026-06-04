@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './home-home.css',
 })
 export class HomeHome implements OnInit {
-   bankerName = "Elizabeth Franklin"; 
+  bankerName = "Elizabeth Franklin"; 
   bankerAddress = '123 Main Street'; 
   bankerCity = 'Hoboken'; 
   bankerState = 'NJ'; 
@@ -23,7 +23,7 @@ export class HomeHome implements OnInit {
   employerName = 'Tradelot'; 
   jobTitle = 'Banker'; 
   employmentDates = 'January 2014 - Present'; 
-  
+
   constructor() { }
   ngOnInit(): void {   }
 }
