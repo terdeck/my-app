@@ -1,23 +1,37 @@
 import { Component, OnInit } from '@angular/core';
 import { HighlightDirective } from './highlight';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-services-home',
   standalone: true,
-  imports: [HighlightDirective, NgFor],
+  imports: [HighlightDirective, NgFor, NgIf],
   templateUrl: './services-home.html',
   styleUrl: './services-home.css',
 })
 export class ServicesHomeComponent implements OnInit {
-  bankingServices = ['Issue business loans',
-   'Open new checking and/or saving accounts',
-   'Help clients with account-related issues such as transfers, withdrawals, and deposits',
-   'Provide periodic reports and analysis',
-  'Monitor client accounts and keep information up to date',
-  'Guide clients through their savings, loan, mortgage, and retirement options',
-   'Refer customers to loan officers or other financial specialists',
-  'Resolve debit and credit issues'];
+  bankingServices: any[] = [
+    {
+      "type": "Issue business loans",
+      "years": 2
+    },
+    {
+      "type": "Provide periodic reports and analysis",
+      "years": 7
+    },
+    {
+      "type": "Open new checking and/or saving accounts",
+      "years": 5
+    },
+    {
+      "type": "Monitor client accounts and keep information up-to-date",
+      "years": 3
+    },
+    {
+      "type": "Resolve debit and credit issues",
+      "years": 2
+    }
+  ];
 
   ngOnInit(): void { }
 }
